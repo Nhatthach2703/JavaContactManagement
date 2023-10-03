@@ -61,14 +61,12 @@ public class ContactDAO {
 
     public void printAllContact() {
         if (list.isEmpty()) {
-            System.out.println("Empty");
+            System.out.println("Empty!!!");
         } else {
-            System.out.printf("%-5s%-25s%-20s%-20s%-20s%-20s%-20s\n", "Id", "Name",
-                    "First name", "Last name", "Group", "Address", "Phone");
+            System.out.printf("%-5s%-25s%-20s%-20s%-20s%-20s%-20s\n", "Id", "Name", "First name", "Last name", "Group", "Address", "Phone");
 
             for (Contact contact : list) {
-                System.out.printf("%-5d%-25s%-20s%-20s%-20s%-20s%-20s\n",
-                        contact.getContactId(), contact.getFullName(),
+                System.out.printf("%-5d%-25s%-20s%-20s%-20s%-20s%-20s\n", contact.getContactId(), contact.getFullName(),
                         contact.getFirstName(), contact.getLastName(),
                         contact.getGroup(), contact.getAddress(), contact.getPhone());
             }
@@ -77,7 +75,7 @@ public class ContactDAO {
 
     public void deleteContactd() {
         if (list.isEmpty()) {
-            System.out.println("Empty");
+            System.out.println("Empty!!!");
             return;
         }
         int idDelete = l.getInt("Enter id: ", 1, list.size() + 1);
